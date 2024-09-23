@@ -1,0 +1,32 @@
+#notes_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: gainsboro;
+}
+
+.single_note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    width: -webkit-fill-available;
+    padding: 8px;
+}
+
+.note_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    gap: 16px;
+}
+
+.single_note_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

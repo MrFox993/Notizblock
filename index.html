@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+
+    <script src="./scripts/templates.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/notes.css">
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+  </head>
+  <body onload="renderNotes()">
+    <h1>Notes</h1>
+    <div class="content">
+      <div class="user_input">
+        <input id="noteTitleInput" type="text" placeholder="title" />
+        <input id="noteInput" type="text" placeholder="note" />
+        <button onclick="addNote()" class="save_button">save note</button>
+      </div>
+      <div class="notes">
+        <div>
+          <h2>Notes</h2>
+          <div id="notes_content"></div>
+        </div>
+        <div>
+          <h2>Archiv</h2>
+          <div id="archiv_content"></div>
+        </div>
+        <div>
+          <h2>Trash</h2>
+          <div id="trash_content"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

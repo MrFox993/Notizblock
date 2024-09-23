@@ -1,0 +1,12 @@
+.delete_button:hover{
+    background-color: red;
+}
+.save_button:hover{
+    background-color: green;
+}
+button img{
+    width: 16px;
+}
+.archive_button:hover{
+    background-color: orange;
+}

@@ -1,0 +1,26 @@
+h1{
+    padding: 32px;
+}
+
+.user_input{
+    padding-bottom: 24px;
+    display: flex;
+    gap: 8px;
+}
+input{
+    width: -webkit-fill-available;
+}
+
+.notes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+#trash_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: gainsboro;
+}
