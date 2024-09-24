@@ -1,8 +1,8 @@
 function getNoteHTMLTemplate(indexNote) {
   return `    <div class="single_note">
-                <h3>${notesTitles[indexNote]}</h3>
+                <h3>${allNotes.notesTitles[indexNote]}</h3>
                 <div class="note_content">
-                    <p>- ${notes[indexNote]}</p>
+                    <p>- ${allNotes.notes[indexNote]}</p>
                     <div class="single_note_buttons">
                     <button onclick="archiveNote(${indexNote})" class="archive_button">
                     archiv
@@ -15,9 +15,9 @@ function getNoteHTMLTemplate(indexNote) {
 
 function getArchivNoteHTMLTemplate(indexArchivNote) {
   return `  <div class="single_note">
-                <h3>${archivNotesTitles[indexArchivNote]}</h3>
+                <h3>${allNotes.archivNotesTitles[indexArchivNote]}</h3>
                 <div class="note_content">
-                    <p>- ${archivNotes[indexArchivNote]}</p>
+                    <p>- ${allNotes.archivNotes[indexArchivNote]}</p>
                     <div class="single_note_buttons">
                     <button onclick="fromArchivMoveToNotes(${indexArchivNote})" class="note_button">
                     notes
@@ -30,9 +30,9 @@ function getArchivNoteHTMLTemplate(indexArchivNote) {
 
 function getTrashNoteHTMLTemplate(indexTrashNote) {
   return `  <div class="single_note">
-                <h3>${trashNotesTitles[indexTrashNote]}</h3>
+                <h3>${allNotes.trashNotesTitles[indexTrashNote]}</h3>
                 <div class="note_content">
-                    <p>- ${trashNotes[indexTrashNote]}</p>
+                    <p>- ${allNotes.trashNotes[indexTrashNote]}</p>
                     <div class="single_note_buttons">
                     <button onclick="fromTrashMoveToNotes(${indexTrashNote})" class="note_button">
                     notes
