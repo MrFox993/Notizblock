@@ -1,10 +1,3 @@
-let notes = ["brush teeth", "style hair", "drink coffee"];
-let notesTitles = ["routine", "routine", "routine"];
-let archivNotes = [];
-let archivNotesTitles = [];
-let trashNotes = [];
-let trashNotesTitles = [];
-
 let allNotes = {
   notes: ["brush teeth", "style hair", "drink coffee"],
   notesTitles: ["routine", "routine", "routine"],
@@ -21,6 +14,7 @@ function renderNotes() {
   for (let indexNote = 0; indexNote < allNotes.notes.length; indexNote++) {
     notesContentRef.innerHTML += getNoteHTMLTemplate(indexNote);
   }
+  console.log(allNotes)
 }
 
 function renderArchivNotes() {
