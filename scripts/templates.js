@@ -4,40 +4,40 @@ function getNoteHTMLTemplate(indexNote) {
                 <div class="note_content">
                     <p>- ${allNotes.notes[indexNote]}</p>
                     <div class="single_note_buttons">
-                    <button onclick="archiveNote(${indexNote})" class="archive_button">
+                    <button onclick="moveNote(${indexNote}, 'notes', 'archivNotes')" class="archive_button">
                     archiv
                     </button>
-                    <button onclick="fromNotesMoveToTrashNote(${indexNote})" class="trash_button">trash</button>
+                    <button onclick="moveNote(${indexNote}, 'notes', 'trashNotes')" class="trash_button">trash</button>
                 </div>
                 </div>
                 </div>`;
 }
 
-function getArchivNoteHTMLTemplate(indexArchivNote) {
+function getArchivNoteHTMLTemplate(indexNote) {
   return `  <div class="single_note">
-                <h3>${allNotes.archivNotesTitles[indexArchivNote]}</h3>
+                <h3>${allNotes.archivNotesTitles[indexNote]}</h3>
                 <div class="note_content">
-                    <p>- ${allNotes.archivNotes[indexArchivNote]}</p>
+                    <p>- ${allNotes.archivNotes[indexNote]}</p>
                     <div class="single_note_buttons">
-                    <button onclick="fromArchivMoveToNotes(${indexArchivNote})" class="note_button">
+                    <button onclick="moveNote(${indexNote}, 'archivNotes', 'notes')" class="note_button">
                     notes
                     </button>
-                    <button onclick="fromArchivMoveToTrashNote(${indexArchivNote})" class="trash_button">trash</button>
+                    <button onclick="moveNote(${indexNote}, 'archivNotes', 'trashNotes')" class="trash_button">trash</button>
                 </div>
                 </div>
                 </div>`;
 }
 
-function getTrashNoteHTMLTemplate(indexTrashNote) {
+function getTrashNoteHTMLTemplate(indexNote) {
   return `  <div class="single_note">
-                <h3>${allNotes.trashNotesTitles[indexTrashNote]}</h3>
+                <h3>${allNotes.trashNotesTitles[indexNote]}</h3>
                 <div class="note_content">
-                    <p>- ${allNotes.trashNotes[indexTrashNote]}</p>
+                    <p>- ${allNotes.trashNotes[indexNote]}</p>
                     <div class="single_note_buttons">
-                    <button onclick="fromTrashMoveToNotes(${indexTrashNote})" class="note_button">
+                    <button onclick="moveNote(${indexNote}, 'trashNotes', 'notes')" class="note_button">
                     notes
                     </button>
-                    <button onclick="deleteNote(${indexTrashNote})" class="delete_button">delete</button>
+                    <button onclick="deleteNote(${indexNote})" class="delete_button">delete</button>
                 </div>
                 </div>
                 </div>`;
